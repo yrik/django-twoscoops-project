@@ -4,6 +4,10 @@
 # Packaging files:
 *.egg*
 
+Virtualenv
+.env
+env
+
 # Sphinx docs:
 build
 
