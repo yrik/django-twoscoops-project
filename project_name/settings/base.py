@@ -197,6 +197,7 @@ DJANGO_APPS = (
     # Additional apps
     'django_extensions',
     'south',
+    'pure_pagination',
 )
 
 # DEBUG-specific apps
