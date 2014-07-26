@@ -96,7 +96,7 @@ STATIC_URL = '/static/'
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = (
-    normpath(join(SITE_ROOT, 'static')),
+    normpath(join(DJANGO_ROOT, 'static')),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
@@ -191,7 +191,17 @@ DJANGO_APPS = (
     # Admin panel and documentation:
     'django.contrib.admin',
     # 'django.contrib.admindocs',
+
+    # Additional apps
+    'django_extensions',
+    'south',
 )
+
+# DEBUG-specific apps
+if DEBUG:
+    DJANGO_APPS += (
+        'debug_toolbar',
+    )
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
