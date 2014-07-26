@@ -17,8 +17,10 @@ SITE_NAME = basename(DJANGO_ROOT)
 
 # Add our project to our pythonpath, this way we don't need to type our project
 # name in our dotted import paths:
-path.append(DJANGO_ROOT)
-path.append(join(DJANGO_ROOT, 'apps'))
+if DJANGO_ROOT not in path:
+    path.append(DJANGO_ROOT)
+if join(DJANGO_ROOT, 'apps') not in path:
+    path.append(join(DJANGO_ROOT, 'apps'))
 ########## END PATH CONFIGURATION
 
 
