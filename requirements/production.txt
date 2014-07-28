@@ -2,4 +2,4 @@
 #	production that isn't in development.
 -r base.txt
 
-gunicorn==18.0
+django-debug-toolbar==1.2.1
